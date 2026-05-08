@@ -1,6 +1,6 @@
 public class Solution {
     public int[] TwoSum(int[] nums, int target) {
-        
+        List<int> sol = new List<int>();
         for (int i = 0; i < nums.Length; i++)
         {
             for (int j = i+1; j < nums.Length; j++)
@@ -8,10 +8,12 @@ public class Solution {
                 
                 if (nums[i] + nums[j] == target)
                 {
-                    return new int[] {i,j};
+                    sol.Add(i);
+                    sol.Add(j);
+                    return sol.ToArray();
                 }
             }
         }
-        return new int[0] ;
+        return sol.ToArray() ;
     }
 }
