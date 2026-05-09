@@ -2,8 +2,6 @@ public class Solution {
     public int LengthOfLongestSubstring(string s) {
     
         int big = 0; 
-        
-
         for (int i = 0; i < s.Length; i++)
         {   
             int count = 0;
